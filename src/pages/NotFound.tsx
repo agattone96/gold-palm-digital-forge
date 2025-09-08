@@ -2,6 +2,11 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Home, Phone } from "lucide-react";
+import {
+  COMPANY_NAME,
+  PHONE_NUMBER,
+  FORMATTED_PHONE_NUMBER,
+} from "@/lib/constants";
 
 const NotFound = () => {
   const location = useLocation();
@@ -19,7 +24,7 @@ const NotFound = () => {
             <span className="text-3xl font-bold text-primary-foreground">🌴</span>
           </div>
           <div>
-            <h2 className="text-2xl font-bold font-serif text-foreground">Gold Palm Solutions</h2>
+            <h2 className="text-2xl font-bold font-serif text-foreground">{COMPANY_NAME}</h2>
             <p className="text-sm text-muted-foreground">Premium Tree & Landscape Services</p>
           </div>
         </div>
@@ -50,9 +55,9 @@ const NotFound = () => {
             asChild
             className="hover-glow"
           >
-            <a href="tel:7276214041">
+            <a href={`tel:${PHONE_NUMBER}`}>
               <Phone className="w-5 h-5 mr-2" />
-              Call (727) 621-4041
+              Call {FORMATTED_PHONE_NUMBER}
             </a>
           </Button>
         </div>

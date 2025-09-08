@@ -1,5 +1,6 @@
 import { Star, Quote, Shield, Award } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { COMPANY_NAME } from "@/lib/constants";
 
 const Testimonials = () => {
   const testimonials = [
@@ -7,7 +8,7 @@ const Testimonials = () => {
       name: "Sarah Johnson",
       location: "Sarasota, FL",
       rating: 5,
-      text: "Gold Palm Solutions removed three large oak trees from our property after Hurricane Ian. They were professional, quick, and cleaned up perfectly. Highly recommend!",
+      text: `${COMPANY_NAME} removed three large oak trees from our property after Hurricane Ian. They were professional, quick, and cleaned up perfectly. Highly recommend!`,
       service: "Tree Removal"
     },
     {

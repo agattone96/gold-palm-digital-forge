@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  COMPANY_NAME,
+  PHONE_NUMBER,
+  FORMATTED_PHONE_NUMBER,
+} from "@/lib/constants";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +28,9 @@ const Header = () => {
               <span className="text-2xl font-bold text-primary-foreground">🌴</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold font-serif text-foreground">Gold Palm Solutions</h1>
+              <h1 className="text-xl font-bold font-serif text-foreground">
+                {COMPANY_NAME}
+              </h1>
               <p className="text-sm text-muted-foreground">Premium Tree & Landscape Services</p>
             </div>
           </div>
@@ -44,11 +51,11 @@ const Header = () => {
           {/* Phone & CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="tel:7276214041"
+              href={`tel:${PHONE_NUMBER}`}
               className="flex items-center space-x-2 text-primary hover:text-primary-glow transition-smooth font-semibold"
             >
               <Phone className="w-4 h-4" />
-              <span>(727) 621-4041</span>
+              <span>{FORMATTED_PHONE_NUMBER}</span>
             </a>
             <Button variant="default" className="bg-gradient-primary hover:opacity-90 transition-smooth">
               Free Estimate
@@ -80,11 +87,11 @@ const Header = () => {
               ))}
               <div className="pt-4 space-y-3">
                 <a
-                  href="tel:7276214041"
+                  href={`tel:${PHONE_NUMBER}`}
                   className="flex items-center space-x-2 text-primary font-semibold"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>(727) 621-4041</span>
+                  <span>{FORMATTED_PHONE_NUMBER}</span>
                 </a>
                 <Button variant="default" className="w-full bg-gradient-primary">
                   Free Estimate

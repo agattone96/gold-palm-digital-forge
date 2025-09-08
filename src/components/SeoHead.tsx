@@ -6,7 +6,7 @@ type Props = {
   description?: string;
   canonical?: string;
   jsonLdId?: string;
-  jsonLd?: Record<string, any> | null;
+    jsonLd?: Record<string, unknown> | null;
 };
 
 export default function SeoHead({ title, description, canonical, jsonLdId, jsonLd }: Props) {

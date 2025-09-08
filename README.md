@@ -1,73 +1,37 @@
-# gold-palm-digital-forge
+# Gold Palm Solutions
 
-## Project info
+Gold Palm Solutions is a modern landing page for a digital services company. It highlights the team's offerings, showcases client testimonials and provides a simple way for potential customers to get in touch.
 
-**URL**: https://lovable.dev/projects/21df8a6a-d532-46ce-ba77-6a2f98de924a
+## Features
+- Responsive layout designed for mobile and desktop
+- Service and testimonial sections to describe offerings and experiences
+- Contact form with validation
+- Reusable UI components built with shadcn-ui
 
-## How can I edit this code?
+## Tech Stack
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) for fast builds and local development
+- [Tailwind CSS](https://tailwindcss.com/) for utility-first styling
+- [shadcn-ui](https://ui.shadcn.com/) component primitives
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/21df8a6a-d532-46ce-ba77-6a2f98de924a) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Development
+Install dependencies and start the development server:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd gold-palm-digital-forge
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Deployment
+Create a production build and deploy the `dist/` directory to your preferred static hosting service (e.g., Netlify, Vercel, GitHub Pages):
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+npm run build
+```
 
-**Use GitHub Codespaces**
+## Contributing
+1. Fork this repository and create a feature branch.
+2. Install dependencies and make your changes.
+3. Run `npm run lint` and ensure all checks pass.
+4. Commit your work and open a pull request.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/21df8a6a-d532-46ce-ba77-6a2f98de924a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)

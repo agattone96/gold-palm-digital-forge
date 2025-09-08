@@ -1,5 +1,6 @@
 import { Shield, Award, Clock, Heart } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { COMPANY_NAME } from "@/lib/constants";
 
 const About = () => {
   const values = [
@@ -37,8 +38,8 @@ const About = () => {
             </h2>
             
             <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-              For over a decade, Gold Palm Solutions has been the premier choice for property 
-              owners throughout the Sarasota, Bradenton, and Tampa Bay areas who demand 
+              For over a decade, {COMPANY_NAME} has been the premier choice for property
+              owners throughout the Sarasota, Bradenton, and Tampa Bay areas who demand
               exceptional quality and professional service.
             </p>
             

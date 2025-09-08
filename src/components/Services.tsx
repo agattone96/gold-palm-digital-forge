@@ -5,6 +5,11 @@ import treeServiceImage from "@/assets/hero-tree-service.jpg";
 import landscapingImage from "@/assets/landscaping-service.jpg";
 import concreteImage from "@/assets/concrete-service.jpg";
 import junkRemovalImage from "@/assets/junk-removal-service.jpg";
+import {
+  COMPANY_NAME,
+  PHONE_NUMBER,
+  FORMATTED_PHONE_NUMBER,
+} from "@/lib/constants";
 
 const Services = () => {
   const services = [
@@ -46,7 +51,7 @@ const Services = () => {
             Our Premium Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            From tree care to complete property transformations, Gold Palm Solutions delivers 
+            From tree care to complete property transformations, {COMPANY_NAME} delivers
             exceptional results with unmatched professionalism and expertise.
           </p>
         </div>
@@ -71,9 +76,9 @@ const Services = () => {
           title="Ready to Transform Your Property?"
           description="Get a free, no-obligation estimate from our professional team. We'll assess your needs and provide a detailed plan."
           primaryButtonText="Schedule Free Consultation"
-          secondaryButtonText="Call (727) 621-4041"
+          secondaryButtonText={`Call ${FORMATTED_PHONE_NUMBER}`}
           primaryButtonAction={() => console.log("Schedule consultation")}
-          secondaryButtonAction={() => window.open("tel:7276214041")}
+          secondaryButtonAction={() => window.open(`tel:${PHONE_NUMBER}`)}
         />
       </div>
     </section>
