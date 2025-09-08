@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Gold Palm Solutions Design System - Professional Tree Service & Landscaping 
-All colors MUST be HSL for proper theming.
+/* Gold Palm Solutions Design System - Professional Tree Service & Landscaping
+   All colors MUST be HSL for proper theming.
 */
 
 @layer base {
@@ -48,29 +48,19 @@ All colors MUST be HSL for proper theming.
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary) / 0.9) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
-    
+
     /* Professional Shadows */
     --shadow-elegant: 0 10px 40px -10px hsl(var(--primary) / 0.2);
     --shadow-premium: 0 20px 60px -15px hsl(var(--secondary) / 0.3);
     --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.1);
-    
+
     /* Smooth Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-    /* Sidebar (if needed) */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    /* Dark mode maintains gold branding with darker backgrounds */
+    /* Dark mode keeps gold branding with darker backgrounds */
     --background: 210 25% 8%;
     --foreground: 45 20% 95%;
 
@@ -84,7 +74,7 @@ All colors MUST be HSL for proper theming.
     --primary-foreground: 210 25% 8%;
     --primary-glow: 45 90% 65%;
 
-    --secondary: 120 20% 35%;        /* Lighter forest green for dark mode */
+    --secondary: 120 20% 35%;
     --secondary-foreground: 45 20% 95%;
 
     --muted: 210 25% 15%;
@@ -99,20 +89,11 @@ All colors MUST be HSL for proper theming.
     --border: 210 25% 20%;
     --input: 210 25% 20%;
     --ring: 45 85% 55%;
-    
+
     /* Dark mode gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--secondary) / 0.8) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
-    
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -123,19 +104,51 @@ All colors MUST be HSL for proper theming.
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    color-scheme: light;
+  }
+
+  .dark body {
+    color-scheme: dark;
+  }
+
+  /* Selection */
+  ::selection {
+    background: hsl(var(--primary) / 0.25);
+    color: hsl(var(--primary-foreground));
+  }
+  ::-moz-selection {
+    background: hsl(var(--primary) / 0.25);
+    color: hsl(var(--primary-foreground));
+  }
+
+  /* Links */
+  a {
+    color: hsl(var(--primary));
+    text-underline-offset: 3px;
+  }
+  a:hover {
+    color: hsl(var(--primary-glow));
+  }
+
+  /* Focus states */
+  :where(a, button, [role="button"], input, select, textarea):focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+    border-radius: calc(var(--radius) / 1.5);
   }
 
   /* Custom utility classes for Gold Palm Solutions */
-  .gradient-primary {
-    background: var(--gradient-primary);
+  .gradient-primary,
+  .bg-gradient-primary { /* alias kept for existing components */
+    background-image: var(--gradient-primary);
   }
 
   .gradient-hero {
-    background: var(--gradient-hero);
+    background-image: var(--gradient-hero);
   }
 
   .gradient-subtle {
-    background: var(--gradient-subtle);
+    background-image: var(--gradient-subtle);
   }
 
   .shadow-elegant {
@@ -160,10 +173,87 @@ All colors MUST be HSL for proper theming.
 
   /* Professional hover effects */
   .hover-lift {
-    @apply transition-smooth hover:transform hover:-translate-y-1 hover:shadow-premium;
+    @apply transition-smooth hover:-translate-y-1 hover:shadow-premium;
+    transform: translateZ(0); /* GPU hint */
   }
 
   .hover-glow {
-    @apply transition-smooth hover:shadow-elegant;
+    @apply transition-smooth;
+    box-shadow: 0 0 0 0 hsl(var(--primary) / 0);
+  }
+  .hover-glow:hover {
+    box-shadow: 0 0 0 4px hsl(var(--primary) / 0.15), var(--shadow-elegant);
+  }
+
+  /* Text glow utility used in components */
+  .text-primary-glow {
+    color: hsl(var(--primary));
+    text-shadow: 0 0 12px hsl(var(--primary) / 0.45);
+  }
+
+  /* Radius helpers for consistent rounding */
+  .rounded-card {
+    border-radius: var(--radius);
+  }
+}
+
+/* Animations used by components (fade/slide/scale) */
+@layer utilities {
+  @keyframes gp-fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes gp-slide-in-left {
+    from { opacity: 0; transform: translateX(-12px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes gp-slide-in-right {
+    from { opacity: 0; transform: translateX(12px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+  @keyframes gp-scale-in {
+    from { opacity: 0; transform: scale(0.98); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  .animate-fade-in { animation: gp-fade-in 420ms cubic-bezier(0.4, 0, 0.2, 1) both; }
+  .animate-slide-in-left { animation: gp-slide-in-left 450ms cubic-bezier(0.4, 0, 0.2, 1) both; }
+  .animate-slide-in-right { animation: gp-slide-in-right 450ms cubic-bezier(0.4, 0, 0.2, 1) both; }
+  .animate-scale-in { animation: gp-scale-in 380ms cubic-bezier(0.4, 0, 0.2, 1) both; }
+
+  /* Motion safety */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-in,
+    .animate-slide-in-left,
+    .animate-slide-in-right,
+    .animate-scale-in {
+      animation: none !important;
+    }
+    .transition-smooth,
+    .transition-bounce {
+      transition-duration: 1ms !important;
+    }
+  }
+
+  /* Utility: balanced headings where supported */
+  @supports (text-wrap: balance) {
+    .text-balance { text-wrap: balance; }
+  }
+
+  /* Scrollbar styling (WebKit + Firefox) */
+  .scrollbar-gold {
+    scrollbar-color: hsl(var(--secondary)) transparent; /* Firefox */
+  }
+  .scrollbar-gold::-webkit-scrollbar {
+    height: 10px; width: 10px;
+  }
+  .scrollbar-gold::-webkit-scrollbar-thumb {
+    background: hsl(var(--secondary) / 0.6);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  .scrollbar-gold::-webkit-scrollbar-track {
+    background: transparent;
   }
 }
