@@ -44,16 +44,16 @@ const Contact = () => {
     },
     {
       icon: MapPin,
-      title: "Service Area",
-      details: "Tampa Bay Area",
-      subtitle: "Sarasota, Bradenton & surrounding cities",
+      title: "Service Area", 
+      details: "Sarasota, FL & Surrounding",
+      subtitle: "Bradenton, Palmetto, Venice, Lakewood Ranch & more",
       action: ""
     },
     {
       icon: Clock,
       title: "Business Hours",
-      details: "Mon-Fri: 7AM-6PM",
-      subtitle: "Emergency service available 24/7",
+      details: "Daily: 5AM-10PM",
+      subtitle: "Free estimates available",
       action: ""
     }
   ];

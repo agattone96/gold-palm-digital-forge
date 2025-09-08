@@ -13,12 +13,16 @@ const Footer = () => {
   ];
 
   const serviceAreas = [
-    "Sarasota",
-    "Bradenton", 
-    "Tampa",
-    "St. Petersburg",
-    "Clearwater",
-    "Lakewood Ranch"
+    "Bradenton",
+    "Palmetto", 
+    "Venice",
+    "Lakewood Ranch",
+    "Longboat Key",
+    "Siesta Key",
+    "Parrish",
+    "Port Charlotte",
+    "Nokomis",
+    "Englewood"
   ];
 
   return (
@@ -37,7 +41,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="opacity-90 leading-relaxed">
-              Making properties safer and more beautiful throughout the Tampa Bay area. 
+              Making properties safer and more beautiful throughout Sarasota, Bradenton & surrounding areas. 
               Professional tree service, landscaping, and property solutions you can trust.
             </p>
             
@@ -58,7 +62,7 @@ const Footer = () => {
               </a>
               <div className="flex items-center space-x-3 opacity-90">
                 <MapPin className="w-5 h-5" />
-                <span>Serving Tampa Bay Area</span>
+                <span>Sarasota, FL 34243</span>
               </div>
             </div>
           </div>
