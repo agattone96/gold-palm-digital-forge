@@ -6,14 +6,16 @@ import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { COMPANY_NAME, PHONE_NUMBER } from "@/lib/constants";
 
 /* Stable LocalBusiness JSON-LD (client-injected to avoid SSR/hydration issues) */
+const phoneInternational = `+1-${PHONE_NUMBER.slice(0,3)}-${PHONE_NUMBER.slice(3,6)}-${PHONE_NUMBER.slice(6)}`;
 const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Gold Palm Solutions",
+  name: COMPANY_NAME,
   url: "https://www.goldpalmsolutions.com/",
-  telephone: "+1-727-621-4041",
+  telephone: phoneInternational,
   address: {
     "@type": "PostalAddress",
     addressLocality: "Sarasota",

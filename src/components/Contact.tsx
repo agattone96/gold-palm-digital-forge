@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ContactForm, ContactFormData } from "@/components/ui/contact-form";
 import { ContactInfoCard } from "@/components/ui/contact-info-card";
+import {
+  PHONE_NUMBER,
+  FORMATTED_PHONE_NUMBER,
+  COMPANY_EMAIL,
+} from "@/lib/constants";
 
 const Contact = () => {
   const handleFormSubmit = (formData: ContactFormData) => {
@@ -14,16 +19,16 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: "(727) 621-4041",
+      details: FORMATTED_PHONE_NUMBER,
       subtitle: "Free estimates & consultation",
-      action: "tel:7276214041"
+      action: `tel:${PHONE_NUMBER}`,
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: "info@goldpalmsolutions.com",
+      details: COMPANY_EMAIL,
       subtitle: "Quick response guaranteed",
-      action: "mailto:info@goldpalmsolutions.com"
+      action: `mailto:${COMPANY_EMAIL}`,
     },
     {
       icon: MapPin,
@@ -84,7 +89,7 @@ const Contact = () => {
                   We provide 24/7 emergency tree removal and storm cleanup services
                 </p>
                 <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-smooth" asChild>
-                  <a href="tel:7276214041">
+                  <a href={`tel:${PHONE_NUMBER}`}>
                     <Phone className="w-5 h-5 mr-2" />
                     Call Emergency Line
                   </a>

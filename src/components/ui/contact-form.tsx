@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MessageSquare } from "lucide-react";
+import { FORMATTED_PHONE_NUMBER } from "@/lib/constants";
 
 interface ContactFormProps {
   onSubmit?: (formData: ContactFormData) => void;
@@ -83,7 +84,7 @@ export const ContactForm = ({ onSubmit, className }: ContactFormProps) => {
                   onChange={handleInputChange}
                   required
                   className="transition-smooth focus:ring-primary focus:border-primary"
-                  placeholder="(727) 621-4041"
+                  placeholder={FORMATTED_PHONE_NUMBER}
                 />
               </div>
             </div>

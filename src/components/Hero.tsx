@@ -2,6 +2,7 @@ import { Phone, Shield, Award, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TrustIndicator } from "@/components/ui/trust-indicator";
 import heroImage from "@/assets/hero-tree-service.jpg";
+import { FORMATTED_PHONE_NUMBER } from "@/lib/constants";
 
 const Hero = () => {
   return (
@@ -40,7 +41,7 @@ const Hero = () => {
                 className="border-white/30 text-white hover:bg-white/10 transition-smooth text-lg px-8 py-4 font-semibold"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                (727) 621-4041
+                {FORMATTED_PHONE_NUMBER}
               </Button>
             </div>
 

@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, ShieldCheck, CheckCircle2 } from "lucide-react";
 import SeoHead from "@/components/SeoHead";
+import {
+  COMPANY_NAME,
+  PHONE_NUMBER,
+  FORMATTED_PHONE_NUMBER,
+} from "@/lib/constants";
 
 type FAQ = { q: string; a: string };
 type Props = {
@@ -12,11 +17,11 @@ type Props = {
   cityHint?: string;
   faq?: FAQ[];
   canonical?: string;
-  schema?: Record<string, any>;
+  schema?: Record<string, unknown>;
 };
 
 export default function ServicePage({ title, blurb, bullets, faq = [], canonical, schema }: Props) {
-  const pageTitle = `${title} | Gold Palm Solutions`;
+  const pageTitle = `${title} | ${COMPANY_NAME}`;
   const desc = blurb.slice(0, 150);
 
   return (
@@ -45,9 +50,11 @@ export default function ServicePage({ title, blurb, bullets, faq = [], canonical
             </div>
           </div>
           <div className="mt-8">
-            <Button size="lg" className="bg-gradient-primary text-primary-foreground" asChild>
-              <a href="tel:7276214041"><Phone className="w-5 h-5 mr-2" /> Call (727) 621-4041</a>
-            </Button>
+              <Button size="lg" className="bg-gradient-primary text-primary-foreground" asChild>
+                <a href={`tel:${PHONE_NUMBER}`}>
+                  <Phone className="w-5 h-5 mr-2" /> Call {FORMATTED_PHONE_NUMBER}
+                </a>
+              </Button>
           </div>
         </div>
       </section>
@@ -75,9 +82,11 @@ export default function ServicePage({ title, blurb, bullets, faq = [], canonical
                 Call now or request a free, no-obligation estimate. Fast scheduling for Sarasota, Bradenton & Lakewood Ranch.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button className="bg-gradient-primary text-primary-foreground" asChild>
-                  <a href="tel:7276214041"><Phone className="w-5 h-5 mr-2" /> Call (727) 621-4041</a>
-                </Button>
+                  <Button className="bg-gradient-primary text-primary-foreground" asChild>
+                    <a href={`tel:${PHONE_NUMBER}`}>
+                      <Phone className="w-5 h-5 mr-2" /> Call {FORMATTED_PHONE_NUMBER}
+                    </a>
+                  </Button>
                 <Button variant="outline" asChild>
                   <a href="/#contact">Request Free Estimate</a>
                 </Button>

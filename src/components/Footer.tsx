@@ -1,4 +1,11 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react";
+import {
+  COMPANY_NAME,
+  PHONE_NUMBER,
+  FORMATTED_PHONE_NUMBER,
+  COMPANY_EMAIL,
+  COMPANY_ADDRESS,
+} from "@/lib/constants";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -36,7 +43,7 @@ const Footer = () => {
                 <span className="text-2xl font-bold text-primary-foreground">🌴</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold font-serif">Gold Palm Solutions</h3>
+                  <h3 className="text-xl font-bold font-serif">{COMPANY_NAME}</h3>
                 <p className="text-sm opacity-80">Premium Property Services</p>
               </div>
             </div>
@@ -46,24 +53,24 @@ const Footer = () => {
             </p>
             
             <div className="space-y-3">
-              <a 
-                href="tel:7276214041" 
-                className="flex items-center space-x-3 text-primary-glow hover:opacity-80 transition-smooth"
-              >
-                <Phone className="w-5 h-5" />
-                <span className="font-semibold">(727) 621-4041</span>
-              </a>
-              <a 
-                href="mailto:info@goldpalmsolutions.com" 
-                className="flex items-center space-x-3 opacity-90 hover:opacity-100 transition-smooth"
-              >
-                <Mail className="w-5 h-5" />
-                <span>info@goldpalmsolutions.com</span>
-              </a>
-              <div className="flex items-center space-x-3 opacity-90">
-                <MapPin className="w-5 h-5" />
-                <span>Sarasota, FL 34243</span>
-              </div>
+                <a
+                  href={`tel:${PHONE_NUMBER}`}
+                  className="flex items-center space-x-3 text-primary-glow hover:opacity-80 transition-smooth"
+                >
+                  <Phone className="w-5 h-5" />
+                  <span className="font-semibold">{FORMATTED_PHONE_NUMBER}</span>
+                </a>
+                <a
+                  href={`mailto:${COMPANY_EMAIL}`}
+                  className="flex items-center space-x-3 opacity-90 hover:opacity-100 transition-smooth"
+                >
+                  <Mail className="w-5 h-5" />
+                  <span>{COMPANY_EMAIL}</span>
+                </a>
+                <div className="flex items-center space-x-3 opacity-90">
+                  <MapPin className="w-5 h-5" />
+                  <span>{COMPANY_ADDRESS}</span>
+                </div>
             </div>
           </div>
 
@@ -166,7 +173,7 @@ const Footer = () => {
         <div className="border-t border-secondary-foreground/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm opacity-80">
-              © {currentYear} Gold Palm Solutions. All rights reserved.
+              © {currentYear} {COMPANY_NAME}. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="opacity-80 hover:opacity-100 transition-smooth">
