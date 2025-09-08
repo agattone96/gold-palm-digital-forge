@@ -1,5 +1,6 @@
 import { Phone, Shield, Award, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { TrustIndicator } from "@/components/ui/trust-indicator";
 import heroImage from "@/assets/hero-tree-service.jpg";
 
 const Hero = () => {
@@ -23,8 +24,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl leading-relaxed">
-              Premium tree service, landscaping, and property solutions in Sarasota, Bradenton & Tampa Bay. 
-              Professional expertise you can trust.
+              Premium tree service, land clearing, concrete, lawn maintenance, and junk removal in Sarasota, Bradenton & Lakewood Ranch. Professional expertise you can trust.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -46,37 +46,26 @@ const Hero = () => {
 
             {/* Trust Indicators */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-slide-in-left">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Shield className="w-8 h-8 text-primary-glow" />
-                </div>
-                <p className="text-white font-semibold">Fully Insured</p>
-                <p className="text-white/80 text-sm">Licensed & Bonded</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Award className="w-8 h-8 text-primary-glow" />
-                </div>
-                <p className="text-white font-semibold">Expert Team</p>
-                <p className="text-white/80 text-sm">Certified Arborists</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <Users className="w-8 h-8 text-primary-glow" />
-                </div>
-                <p className="text-white font-semibold">500+ Clients</p>
-                <p className="text-white/80 text-sm">Satisfied Customers</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-2xl font-bold text-primary-glow">24/7</span>
-                </div>
-                <p className="text-white font-semibold">Emergency</p>
-                <p className="text-white/80 text-sm">Storm Response</p>
-              </div>
+              <TrustIndicator
+                icon={Shield}
+                title="Licensed & Insured"
+                subtitle="30+ Years Experience"
+              />
+              <TrustIndicator
+                icon={<span className="text-2xl font-bold text-primary-glow">30+</span>}
+                title="Years Experience"
+                subtitle="Specialized Equipment"
+              />
+              <TrustIndicator
+                icon={<span className="text-2xl font-bold text-primary-glow">24/7</span>}
+                title="Emergency Response"
+                subtitle="Storm & Tree Service"
+              />
+              <TrustIndicator
+                icon={Award}
+                title="Professional Team"
+                subtitle="Bucket trucks & cranes"
+              />
             </div>
           </div>
         </div>

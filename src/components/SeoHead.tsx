@@ -20,7 +20,7 @@ export default function SeoHead({ title, description, canonical, jsonLdId, jsonL
         el = document.createElement("meta");
         el.name = name;
         document.head.appendChild(el);
-        created.append(el);
+        created.push(el);
       }
       el.content = content;
     };
@@ -33,7 +33,7 @@ export default function SeoHead({ title, description, canonical, jsonLdId, jsonL
         canonicalEl = document.createElement("link");
         canonicalEl.rel = "canonical";
         document.head.appendChild(canonicalEl);
-        created.append(canonicalEl);
+        created.push(canonicalEl);
       }
       canonicalEl.href = canonical;
     }
@@ -46,7 +46,7 @@ export default function SeoHead({ title, description, canonical, jsonLdId, jsonL
         s.id = jsonLdId;
         s.text = JSON.stringify(jsonLd);
         document.head.appendChild(s);
-        created.append(s);
+        created.push(s);
       }
     }
 
