@@ -14,7 +14,9 @@ const Contact = () => {
     message: ""
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -44,16 +46,17 @@ const Contact = () => {
     },
     {
       icon: MapPin,
-      title: "Service Area", 
+      title: "Service Area",
       details: "Sarasota, FL & Surrounding",
-      subtitle: "Bradenton, Palmetto, Venice, Lakewood Ranch & more",
+      subtitle:
+        "Bradenton, Palmetto, Venice, Lakewood Ranch, Longboat Key, Siesta Key, Parrish, Port Charlotte, Nokomis, Englewood",
       action: ""
     },
     {
       icon: Clock,
       title: "Business Hours",
-      details: "Daily: 5AM-10PM",
-      subtitle: "Free estimates available",
+      details: "Daily: 5AM–10PM",
+      subtitle: "24/7 emergency response",
       action: ""
     }
   ];
@@ -65,8 +68,8 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold font-serif text-foreground mb-4">
             Get Your Free Estimate Today
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">  
-            Ready to transform your property? Contact us for a free, no-obligation consultation. 
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Ready to transform your property? Contact us for a free, no-obligation consultation.
             Our experts will assess your needs and provide a detailed estimate.
           </p>
         </div>
@@ -110,7 +113,7 @@ const Contact = () => {
                         onChange={handleInputChange}
                         required
                         className="transition-smooth focus:ring-primary focus:border-primary"
-                        placeholder="(000) 000-0000"
+                        placeholder="(727) 621-4041"
                       />
                     </div>
                   </div>
@@ -131,21 +134,25 @@ const Contact = () => {
 
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-2">
-                      Service Needed
+                      Service Needed *
                     </label>
                     <select
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
+                      required
                       className="w-full px-3 py-2 border border-input rounded-md transition-smooth focus:ring-primary focus:border-primary bg-background text-foreground"
                     >
                       <option value="">Select a service</option>
                       <option value="tree-removal">Tree Removal</option>
-                      <option value="tree-trimming">Tree Trimming</option>
-                      <option value="landscaping">Landscaping</option>
-                      <option value="concrete">Concrete Work</option>
+                      <option value="limb-reductions">Limb Reductions / Tree Trimming</option>
+                      <option value="stump-grinding">Stump Grinding</option>
+                      <option value="lawn-maintenance">Lawn Maintenance</option>
+                      <option value="concrete">Concrete</option>
+                      <option value="paver-gravel-driveways">Paver & Gravel Driveways</option>
+                      <option value="land-clearing-grading">Land Clearing & Grading</option>
                       <option value="junk-removal">Junk Removal</option>
-                      <option value="emergency">Emergency Service</option>
+                      <option value="emergency-storm-response">Emergency Storm Response</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -164,9 +171,9 @@ const Contact = () => {
                     />
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    size="lg" 
+                  <Button
+                    type="submit"
+                    size="lg"
                     className="w-full bg-gradient-primary hover:opacity-90 transition-smooth text-lg font-semibold"
                   >
                     Get My Free Estimate
@@ -181,7 +188,7 @@ const Contact = () => {
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
-                <Card 
+                <Card
                   key={info.title}
                   className={`hover-lift border-0 shadow-card animate-scale-in`}
                   style={{ animationDelay: `${index * 0.1}s` }}
@@ -196,7 +203,7 @@ const Contact = () => {
                           {info.title}
                         </h3>
                         {info.action ? (
-                          <a 
+                          <a
                             href={info.action}
                             className="text-xl font-semibold text-primary hover:text-primary-glow transition-smooth"
                           >
@@ -207,9 +214,7 @@ const Contact = () => {
                             {info.details}
                           </div>
                         )}
-                        <p className="text-muted-foreground mt-1">
-                          {info.subtitle}
-                        </p>
+                        <p className="text-muted-foreground mt-1">{info.subtitle}</p>
                       </div>
                     </div>
                   </CardContent>
@@ -220,18 +225,15 @@ const Contact = () => {
             {/* Emergency CTA */}
             <Card className="border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 shadow-elegant">
               <CardContent className="p-6 text-center">
-                <h3 className="text-xl font-bold text-foreground mb-2">
-                  Emergency Storm Damage?
-                </h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">Emergency Storm Damage?</h3>
                 <p className="text-muted-foreground mb-4">
                   We provide 24/7 emergency tree removal and storm cleanup services
                 </p>
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-primary hover:opacity-90 transition-smooth"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Emergency Line
+                <Button size="lg" className="bg-gradient-primary hover:opacity-90 transition-smooth" asChild>
+                  <a href="tel:7276214041">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call Emergency Line
+                  </a>
                 </Button>
               </CardContent>
             </Card>
