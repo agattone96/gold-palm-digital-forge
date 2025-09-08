@@ -1,0 +1,10 @@
+site_name: Gold Palm Digital Forge
+site_url: https://example.github.io/gold-palm-digital-forge
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Guide:
+      - Quickstart: guide/quickstart.md
+  - Architecture: architecture.md
+  - Roadmap: roadmap.md
