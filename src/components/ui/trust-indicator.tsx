@@ -8,8 +8,6 @@ interface TrustIndicatorProps {
 }
 
 export const TrustIndicator = ({ icon: Icon, title, subtitle, delay }: TrustIndicatorProps) => {
-  console.log('TrustIndicator Icon:', Icon, 'Type:', typeof Icon, 'IsValidElement:', React.isValidElement(Icon));
-  
   const renderIcon = (): React.ReactNode => {
     // If it's already a React element (JSX), return it directly
     if (React.isValidElement(Icon)) {

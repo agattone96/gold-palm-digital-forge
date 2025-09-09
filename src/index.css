@@ -8,16 +8,16 @@
 
 @layer base {
   :root {
-    /* Core Brand Colors */
+    /* Core Brand Colors - Enhanced Contrast */
     --background: 0 0% 100%;
-    --foreground: 210 15% 15%;
+    --foreground: 210 20% 8%;           /* Much darker for better contrast */
 
     /* Card & UI Elements */
     --card: 0 0% 100%;
-    --card-foreground: 210 15% 15%;
+    --card-foreground: 210 20% 8%;      /* Much darker for better contrast */
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 15% 15%;
+    --popover-foreground: 210 20% 8%;   /* Much darker for better contrast */
 
     /* Primary Gold Brand Colors */
     --primary: 45 85% 47%;          /* Rich Gold #D4AF37 */
@@ -28,18 +28,18 @@
     --secondary: 120 25% 25%;       /* Forest Green */
     --secondary-foreground: 0 0% 100%;
 
-    /* Neutral Tones */
-    --muted: 45 20% 95%;            /* Warm off-white */
-    --muted-foreground: 210 15% 45%;
+    /* Neutral Tones - Better Contrast */
+    --muted: 45 20% 96%;            /* Slightly lighter warm off-white */
+    --muted-foreground: 210 25% 35%; /* Much darker for better contrast */
 
-    --accent: 45 30% 90%;           /* Light gold accent */
-    --accent-foreground: 210 15% 15%;
+    --accent: 45 30% 92%;           /* Slightly lighter gold accent */
+    --accent-foreground: 210 20% 8%; /* Much darker for better contrast */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 45 15% 88%;
-    --input: 45 15% 88%;
+    --border: 45 20% 85%;            /* Slightly darker border for visibility */
+    --input: 45 20% 85%;             /* Slightly darker input border */
     --ring: 45 85% 47%;
 
     --radius: 0.75rem;
@@ -60,34 +60,34 @@
   }
 
   .dark {
-    /* Dark mode keeps gold branding with darker backgrounds */
-    --background: 210 25% 8%;
-    --foreground: 45 20% 95%;
+    /* Dark mode with improved contrast */
+    --background: 210 30% 6%;        /* Darker background */
+    --foreground: 45 25% 96%;        /* Brighter text for contrast */
 
-    --card: 210 25% 10%;
-    --card-foreground: 45 20% 95%;
+    --card: 210 30% 8%;              /* Slightly lighter cards */
+    --card-foreground: 45 25% 96%;   /* Brighter text for contrast */
 
-    --popover: 210 25% 10%;
-    --popover-foreground: 45 20% 95%;
+    --popover: 210 30% 8%;           /* Consistent with cards */
+    --popover-foreground: 45 25% 96%; /* Brighter text for contrast */
 
     --primary: 45 85% 55%;           /* Brighter gold for dark mode */
     --primary-foreground: 210 25% 8%;
     --primary-glow: 45 90% 65%;
 
-    --secondary: 120 20% 35%;
-    --secondary-foreground: 45 20% 95%;
+    --secondary: 120 25% 40%;        /* Brighter secondary for contrast */
+    --secondary-foreground: 45 25% 96%;
 
-    --muted: 210 25% 15%;
-    --muted-foreground: 45 15% 65%;
+    --muted: 210 30% 12%;            /* Darker muted background */
+    --muted-foreground: 45 20% 75%;  /* Brighter muted text */
 
-    --accent: 210 25% 20%;
-    --accent-foreground: 45 20% 95%;
+    --accent: 210 30% 15%;           /* Darker accent background */
+    --accent-foreground: 45 25% 96%; /* Brighter accent text */
 
     --destructive: 0 62.8% 50.6%;
     --destructive-foreground: 45 20% 95%;
 
-    --border: 210 25% 20%;
-    --input: 210 25% 20%;
+    --border: 210 25% 25%;           /* Lighter border for visibility */
+    --input: 210 25% 25%;            /* Lighter input border */
     --ring: 45 85% 55%;
 
     /* Dark mode gradients */
