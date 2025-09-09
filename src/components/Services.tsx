@@ -19,6 +19,7 @@ const Services = () => {
       description: "Safe, professional removals and trimming. From hazardous takedowns to routine maintenance, we handle it all.",
       image: treeServiceImage,
       features: ["Hazardous tree removal", "Limb reductions", "Hurricane/storm cleanup", "Stump grinding"],
+      link: "/services/tree-removal"
     },
     {
       icon: Leaf,
@@ -26,6 +27,7 @@ const Services = () => {
       description: "Keep your property clean and cared for with reliable maintenance.",
       image: landscapingImage,
       features: ["Mowing and edging", "Hedge trimming", "Seasonal cleanups", "Debris haul-away"],
+      link: "/services/lawn-maintenance"
     },
     {
       icon: Building,
@@ -33,6 +35,7 @@ const Services = () => {
       description: "Quality flatwork and drive surfaces that last.",
       image: concreteImage,
       features: ["Driveways and slabs", "Walkways and patios", "Paver or gravel driveways", "Repairs and replacements"],
+      link: "/services/concrete-work"
     },
     {
       icon: Truck,
@@ -40,6 +43,7 @@ const Services = () => {
       description: "Site prep done right with the proper machines.",
       image: junkRemovalImage,
       features: ["Brush and lot clearing", "Grading and leveling", "Access roads", "Debris removal"],
+      link: "/services/land-clearing"
     },
   ];
 
@@ -66,7 +70,7 @@ const Services = () => {
               image={service.image}
               features={service.features}
               index={index}
-              onLearnMore={() => console.log(`Learn more about ${service.title}`)}
+              onLearnMore={() => window.location.href = service.link}
             />
           ))}
         </div>

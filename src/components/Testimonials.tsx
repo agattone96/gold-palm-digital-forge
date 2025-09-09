@@ -8,42 +8,42 @@ const Testimonials = () => {
       name: "Sarah Johnson",
       location: "Sarasota, FL",
       rating: 5,
-      text: `${COMPANY_NAME} removed three large oak trees from our property after Hurricane Ian. They were professional, quick, and cleaned up perfectly. Highly recommend!`,
+      text: `${COMPANY_NAME} removed three large oak trees from our property after Hurricane Ian. They were professional, quick, and cleaned up perfectly. <a href="/services/tree-removal" class="text-primary">Best tree removal service</a> in Sarasota!`,
       service: "Tree Removal"
     },
     {
       name: "Mike Rodriguez",
       location: "Bradenton, FL", 
       rating: 5,
-      text: "The landscaping work they did transformed our backyard into an oasis. The attention to detail and quality of plants was exceptional. Worth every penny!",
+      text: "The <a href='/services/lawn-maintenance' class='text-primary'>lawn maintenance</a> work they did transformed our backyard into an oasis. The attention to detail and quality of plants was exceptional. Worth every penny!",
       service: "Landscaping"
     },
     {
       name: "Jennifer Walsh",
       location: "Tampa, FL",
       rating: 5,
-      text: "Called for emergency tree service during a storm. They arrived quickly, handled the dangerous situation safely, and even helped with insurance paperwork.",
+      text: "Called for <a href='/services/tree-removal' class='text-primary'>emergency tree removal</a> during a storm. They arrived quickly, handled the dangerous situation safely, and even helped with insurance paperwork.",
       service: "Emergency Service"
     },
     {
       name: "David Chen",
       location: "Clearwater, FL",
       rating: 5,
-      text: "Professional concrete work on our driveway and walkways. The crew was punctual, clean, and the finished product looks amazing. Great value for the quality.",
+      text: "Professional <a href='/services/concrete-work' class='text-primary'>concrete work</a> on our driveway and walkways. The crew was punctual, clean, and the finished product looks amazing. Great value for the quality.",
       service: "Concrete Services"
     },
     {
       name: "Lisa Thompson",
       location: "Lakewood Ranch, FL",
       rating: 5,
-      text: "Needed a full property cleanout after my mother passed. The team was respectful, efficient, and handled everything with care. Truly compassionate service.",
+      text: "Needed a full property cleanout after my mother passed. The <a href='/services/junk-removal' class='text-primary'>junk removal</a> team was respectful, efficient, and handled everything with care. Truly compassionate service.",
       service: "Junk Removal"
     },
     {
       name: "Robert Martinez",
       location: "St. Petersburg, FL",
       rating: 5,
-      text: "Regular tree maintenance for our commercial property. Always reliable, fairly priced, and professional. Our go-to team for all property needs.",
+      text: "Regular <a href='/services/limb-reductions' class='text-primary'>tree trimming</a> for our commercial property. Always reliable, fairly priced, and professional. Our go-to team for all property needs.",
       service: "Commercial Services"
     }
   ];

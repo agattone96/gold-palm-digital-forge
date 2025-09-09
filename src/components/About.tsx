@@ -40,13 +40,13 @@ const About = () => {
             <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
               For over a decade, {COMPANY_NAME} has been the premier choice for property
               owners throughout the Sarasota, Bradenton, and Tampa Bay areas who demand
-              exceptional quality and professional service.
+              exceptional quality and professional <a href="/services/tree-removal" className="text-primary hover:text-primary-glow">tree removal</a> service.
             </p>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               What started as a small tree service has grown into a comprehensive property 
               solutions company, but we've never lost sight of our core values: safety, 
-              quality, and customer satisfaction. Every project, big or small, receives 
+              quality, and customer satisfaction. Every <a href="/services/stump-grinding" className="text-primary hover:text-primary-glow">stump grinding</a> and <a href="/services/concrete-work" className="text-primary hover:text-primary-glow">concrete work</a> project, big or small, receives 
               the same level of professional attention and care.
             </p>
 

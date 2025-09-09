@@ -12,7 +12,22 @@ const Header = () => {
 
   const navItems = [
     { label: "Home", href: "#home" },
-    { label: "Services", href: "#services" },
+    { 
+      label: "Services", 
+      href: "#services",
+      dropdown: [
+        { label: "Tree Removal", href: "/services/tree-removal" },
+        { label: "Stump Grinding", href: "/services/stump-grinding" },
+        { label: "Limb Reductions", href: "/services/limb-reductions" },
+        { label: "Lawn Maintenance", href: "/services/lawn-maintenance" },
+        { label: "Junk Removal", href: "/services/junk-removal" },
+        { label: "Concrete Work", href: "/services/concrete-work" },
+        { label: "Paver Driveways", href: "/services/paver-driveways" },
+        { label: "Gravel Driveways", href: "/services/gravel-driveways" },
+        { label: "Land Clearing", href: "/services/land-clearing" },
+        { label: "Grading", href: "/services/grading" }
+      ]
+    },
     { label: "About", href: "#about" },
     { label: "Testimonials", href: "#testimonials" },
     { label: "Contact", href: "#contact" },
@@ -38,13 +53,30 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="text-foreground hover:text-primary transition-smooth font-medium"
-              >
-                {item.label}
-              </a>
+              <div key={item.label} className="relative group">
+                <a
+                  href={item.href}
+                  className="text-foreground hover:text-primary transition-smooth font-medium flex items-center"
+                >
+                  {item.label}
+                  {item.dropdown && <span className="ml-1">▾</span>}
+                </a>
+                {item.dropdown && (
+                  <div className="absolute top-full left-0 mt-2 w-56 bg-background border border-border rounded-lg shadow-premium opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-2">
+                      {item.dropdown.map((dropdownItem) => (
+                        <a
+                          key={dropdownItem.label}
+                          href={dropdownItem.href}
+                          className="block px-4 py-2 text-foreground hover:text-primary hover:bg-muted transition-smooth"
+                        >
+                          {dropdownItem.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
 

@@ -58,7 +58,7 @@ export const ServiceCard = ({
           className="w-full hover-glow"
           onClick={onLearnMore}
         >
-          Learn More
+          Get Free Estimate
         </Button>
       </CardContent>
     </Card>

@@ -20,20 +20,21 @@ const Hero = () => {
         <div className="max-w-4xl">
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold font-serif text-white mb-6 leading-tight">
-              Making Your Property
-              <span className="block text-primary-glow">Safer & More Beautiful</span>
+              Tree Removal Sarasota
+              <span className="block text-primary-glow">Licensed & Insured</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl leading-relaxed">
-              Premium tree service, land clearing, concrete, lawn maintenance, and junk removal in Sarasota, Bradenton & Lakewood Ranch. Professional expertise you can trust.
+              Professional tree removal, stump grinding, landscaping & junk removal in Sarasota, Bradenton & Tampa Bay. 24/7 emergency response with certified arborists. Free estimates.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <Button 
                 size="lg" 
                 className="bg-gradient-primary hover:opacity-90 transition-smooth text-lg px-8 py-4 font-semibold"
+                asChild
               >
-                Get Free Estimate
+                <a href="#contact">Get Free Estimate</a>
               </Button>
               <Button
                 asChild

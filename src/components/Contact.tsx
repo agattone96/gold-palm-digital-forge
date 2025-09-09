@@ -52,11 +52,11 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold font-serif text-foreground mb-4">
-            Get Your Free Estimate Today
+            Get Your Free Tree Removal Estimate
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Ready to transform your property? Contact us for a free, no-obligation consultation.
-            Our experts will assess your needs and provide a detailed estimate.
+            Ready to remove that dangerous tree? Contact us for a free, no-obligation consultation.
+            Our certified arborists will assess your needs and provide a detailed estimate for tree removal, stump grinding, or any of our services.
           </p>
         </div>
 
