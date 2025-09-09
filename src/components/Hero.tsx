@@ -37,9 +37,9 @@ const Hero = () => {
               </Button>
               <Button
                 asChild
-                variant="outline"
+                variant="outline-white"
                 size="lg"
-                className="border-white/30 text-white hover:bg-white/10 transition-smooth text-lg px-8 py-4 font-semibold"
+                className="text-lg px-8 py-4 font-semibold"
               >
                 <a href="tel:7276214041">
                   <Phone className="w-5 h-5 mr-2" />

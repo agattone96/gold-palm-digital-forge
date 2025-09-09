@@ -19,13 +19,13 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 20% 8%;   /* Much darker for better contrast */
 
-    /* Primary Gold Brand Colors */
-    --primary: 45 85% 47%;          /* Rich Gold #D4AF37 */
+    /* Primary Gold Brand Colors - Higher Contrast */
+    --primary: 45 90% 42%;          /* Deeper gold for better contrast */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 45 90% 55%;     /* Brighter gold for highlights */
+    --primary-glow: 45 95% 50%;     /* Brighter gold for highlights */
 
-    /* Secondary Nature Colors */
-    --secondary: 120 25% 25%;       /* Forest Green */
+    /* Secondary Nature Colors - Better Contrast */
+    --secondary: 120 30% 22%;       /* Darker forest green for better contrast */
     --secondary-foreground: 0 0% 100%;
 
     /* Neutral Tones - Better Contrast */
@@ -70,9 +70,9 @@
     --popover: 210 30% 8%;           /* Consistent with cards */
     --popover-foreground: 45 25% 96%; /* Brighter text for contrast */
 
-    --primary: 45 85% 55%;           /* Brighter gold for dark mode */
-    --primary-foreground: 210 25% 8%;
-    --primary-glow: 45 90% 65%;
+    --primary: 45 95% 52%;           /* Even brighter gold for dark mode contrast */
+    --primary-foreground: 210 30% 6%;
+    --primary-glow: 45 100% 60%;
 
     --secondary: 120 25% 40%;        /* Brighter secondary for contrast */
     --secondary-foreground: 45 25% 96%;
