@@ -46,7 +46,7 @@ const About = () => {
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               What started as a small tree service has grown into a comprehensive property 
               solutions company, but we've never lost sight of our core values: safety, 
-              quality, and customer satisfaction. Every <a href="/services/stump-grinding" className="text-primary hover:text-primary-glow">stump grinding</a> and <a href="/services/concrete-work" className="text-primary hover:text-primary-glow">concrete work</a> project, big or small, receives 
+              quality, and customer satisfaction. Every <a href="/services/stump-grinding" className="text-primary hover:text-primary-glow">stump grinding</a> and <a href="/services/concrete-work" className=\"text-primary hover:text-primary-glow">concrete work</a> project, big or small, receives 
               the same level of professional attention and care.
             </p>
 
