@@ -1,8 +1,7 @@
 import React from "react";
-import { LucideIcon } from "lucide-react";
 
 interface TrustIndicatorProps {
-  icon: LucideIcon | React.ReactNode;
+  icon: React.ComponentType<{ className?: string }> | React.ReactNode;
   title: string;
   subtitle: string;
   delay?: string;
